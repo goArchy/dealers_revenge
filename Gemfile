@@ -5,6 +5,7 @@ gem 'pg', '~> 0.13.2'
 gem 'activerecord-postgresql-adapter'
 gem 'haml'
 gem 'heroku'
+gem 'devise'
 
 
 group :assets do
