@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.8'
 gem 'pg', '~> 0.13.2'
 gem 'activerecord-postgresql-adapter'
-gem 'haml'
+gem 'haml-rails'
 gem 'heroku'
 gem 'devise'
 

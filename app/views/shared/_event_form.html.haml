@@ -1,0 +1,14 @@
+.row
+  .span6.offset3
+    = form_for(@event) do |f|
+      = f.label :name
+      = f.text_field :name
+      = f.label :address
+      = f.text_field :address
+      = f.label :dob
+      = f.text_field :dob
+      = f.label :ssn
+      = f.text_field :ssn
+      = f.label :description
+      = f.text_area :description
+      = f.submit "Post", class: "btn btn-large btn-primary"

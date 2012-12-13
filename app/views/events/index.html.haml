@@ -1,0 +1,17 @@
+%table.table.table-bordered.table-striped
+  %tr
+    %th Name
+    %th Address
+    %th DOB
+    %th SSN
+
+  - @events.each do |event| 
+    %tr
+      %td= event.name
+      %td= event.address
+      %td= event.dob
+      %td= event.ssn
+
+
+
+

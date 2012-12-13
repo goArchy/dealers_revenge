@@ -1,12 +1,9 @@
 DealersRevenge::Application.routes.draw do
-  authenticated :user do
-    root :to => 'pages#home'
-  end
-
   root :to => "pages#home"
   match '/about', to: 'pages#about'
 
   devise_for :users
+  resources :events
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
