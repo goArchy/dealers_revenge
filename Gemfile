@@ -14,7 +14,7 @@ group :assets do
   gem 'jquery-rails'
   gem 'jquery-ui-rails'
   gem 'compass-rails'
-  gem 'bootstrap-sass-rails'
+  gem 'bootstrap-sass'
   gem 'uglifier'
 end
 
