@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.8'
 gem 'pg', '~> 0.13.2'
+gem 'pg_search'
 gem 'activerecord-postgresql-adapter'
 gem 'haml-rails'
 gem 'heroku'
