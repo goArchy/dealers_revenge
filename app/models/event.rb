@@ -6,5 +6,5 @@ class Event < ActiveRecord::Base
 
   belongs_to :user
 
-  validates :user_id, :name, :dob,  presence: true
+  validates_presence_of :user_id, :name, :dob, :ssn
 end
