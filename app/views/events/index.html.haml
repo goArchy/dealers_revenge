@@ -1,20 +1,28 @@
-= render 'shared/search'
+.four.columns
+  = link_to "New Event", new_event_path, class: "button" if current_user
+  = link_to "Back", events_path, class: "button"
 
-%table.table.table-bordered.table-striped
-  %tr
-    %th Dealer Name
-    %th Name
-    %th Address
-    %th DOB
-    %th SSN
+.four.columns
 
-  - @events.each do |event| 
+.four.columns
+  = render 'shared/search'
+
+.twelve.columns
+  %table.table.table-bordered.table-striped
     %tr
-      %td= event.user.name
-      %td= event.name
-      %td= event.address
-      %td= event.dob.strftime("%m/%d/%Y")
-      %td= event.ssn
+      %th Dealer Name
+      %th Name
+      %th Address
+      %th DOB
+      %th SSN
+
+    - @events.each do |event| 
+      %tr
+        %td= event.user.name
+        %td= event.name
+        %td= event.address
+        %td= event.dob.strftime("%m/%d/%Y")
+        %td= event.ssn
 
 
 

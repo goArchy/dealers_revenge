@@ -1,7 +1,11 @@
 class EventsController < ApplicationController
   before_filter :authenticate
   def index
-    @events = Event.all
+    if current_user
+      @events = current_user.events
+    else
+      @events = Event.all
+    end
   end
 
   def new
