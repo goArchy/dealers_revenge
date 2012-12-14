@@ -28,6 +28,8 @@ class EventsController < ApplicationController
   def authenticate
     if current_user
       @user = current_user
+    elsif current_admin
+      @user = current_admin
     else
       redirect_to root_path
     end
