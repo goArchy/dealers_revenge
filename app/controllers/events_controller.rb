@@ -2,7 +2,6 @@ class EventsController < ApplicationController
   before_filter :authenticate
   def index
     @events = Event.all
-    @events = Event.paginate(page: params[:page])
   end
 
   def new

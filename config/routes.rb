@@ -1,4 +1,9 @@
 DealersRevenge::Application.routes.draw do
+
+  mount RailsAdmin::Engine => '/manage', :as => 'rails_admin'
+
+  devise_for :admins
+
   root :to => "pages#home"
   match '/about', to: 'pages#about'
 
