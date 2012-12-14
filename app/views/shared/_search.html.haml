@@ -1,3 +1,5 @@
 = form_tag(search_path) do
   = text_field_tag 'search', "", :class => 'search-query', :placeholder => "search Events"
   = submit_tag "Search"
+  = link_to "Back", events_path
+

@@ -7,6 +7,8 @@ gem 'activerecord-postgresql-adapter'
 gem 'haml-rails'
 gem 'heroku'
 gem 'devise'
+gem 'will_paginate', '3.0.3'
+gem 'bootstrap-will_paginate', '0.0.6'
 
 
 group :assets do
