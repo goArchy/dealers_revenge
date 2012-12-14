@@ -19,7 +19,6 @@ group :assets do
   gem 'coffee-rails'
   gem 'jquery-ui-rails'
   gem 'compass-rails'
-#  gem 'bootstrap-sass'
   gem 'uglifier'
   gem 'zurb-foundation'
 end
