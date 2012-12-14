@@ -1,24 +1,27 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.8'
-gem 'pg', '~> 0.13.2'
+gem 'pg'
 gem 'pg_search'
 gem 'activerecord-postgresql-adapter'
 gem 'haml-rails'
 gem 'heroku'
 gem 'devise'
-#gem 'bootstrap-will_paginate', '0.0.6'
 gem 'rails_admin'
 
-
 group :assets do
+  gem 'therubyracer'
+  gem 'execjs'
+  gem 'libv8', '~> 3.11.8'
+
+  gem 'jquery-rails'
   gem 'sass-rails'
   gem 'coffee-rails'
-  gem 'jquery-rails'
   gem 'jquery-ui-rails'
   gem 'compass-rails'
-  gem 'bootstrap-sass'
+#  gem 'bootstrap-sass'
   gem 'uglifier'
+  gem 'zurb-foundation'
 end
 
 group :test do
@@ -33,7 +36,7 @@ group :test do
 end
 
 group :development, :test do
-  gem "rspec-rails", ">= 2.10.1"
+  gem "rspec-rails"
   gem 'pry'
   gem 'pry-rails'
   gem 'faker'
