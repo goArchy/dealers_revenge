@@ -11,14 +11,16 @@ Admin.create!(email: "admin@example.org",
              password_confirmation: "foobar")
 
 User.create!(email: "example@example.org",
+             name: "Serra Kia",
              password: "foobar",
              password_confirmation: "foobar")
 
 10.times do |n|
-  name  = Faker::Name.name
+  name  = Faker::Company.name
   email = "example-#{n+1}@example.org"
   password  = "password"
   User.create!(email: email,
+               name: name,
                password: password,
                password_confirmation: password)
 end

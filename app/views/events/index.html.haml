@@ -2,6 +2,7 @@
 
 %table.table.table-bordered.table-striped
   %tr
+    %th Dealer Name
     %th Name
     %th Address
     %th DOB
@@ -9,9 +10,10 @@
 
   - @events.each do |event| 
     %tr
+      %td= event.user.name
       %td= event.name
       %td= event.address
-      %td= event.dob
+      %td= event.dob.strftime("%m/%d/%Y")
       %td= event.ssn
 
 

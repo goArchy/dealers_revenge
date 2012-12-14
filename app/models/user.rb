@@ -7,7 +7,9 @@ class User < ActiveRecord::Base
 
   validates_uniqueness_of :email, :case_sensitive => false
 
-  attr_accessible  :email, :password, :password_confirmation, :remember_me
+  attr_accessible  :email, :password, :password_confirmation, :remember_me, :name
+
+  validates_presence_of :name
 
   has_many :events
 end
