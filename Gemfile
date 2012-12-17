@@ -8,6 +8,7 @@ gem 'haml-rails'
 gem 'heroku'
 gem 'devise'
 gem 'rails_admin'
+gem 'faker'
 
 group :assets do
   gem 'therubyracer'
@@ -38,5 +39,4 @@ group :development, :test do
   gem "rspec-rails"
   gem 'pry'
   gem 'pry-rails'
-  gem 'faker'
 end
