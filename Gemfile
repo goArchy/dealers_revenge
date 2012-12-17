@@ -24,11 +24,11 @@ group :assets do
 end
 
 group :test do
-  gem "cucumber-rails"
-  gem "capybara"
   gem "database_cleaner"
   gem "email_spec"
   gem "factory_girl_rails"
+  gem "cucumber-rails"
+  gem "capybara"
   gem "launchy"
   gem 'simplecov'
   gem 'simplecov-rcov'
