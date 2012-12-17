@@ -1,7 +1,10 @@
 %header.navbar.navbar-fixed-top.navbar-inverse
   .navbar-inner
     .container
-      = link_to "Dealers Revenge", root_path, id: "logo"
+      - if current_user
+        = link_to "Dealers Revenge", events_path, id: "logo"
+      -else
+        = link_to "Dealers Revenge", root_path, id: "logo"
       %nav
         %ul.nav.pull-right
           %li= link_to "Home",  root_path

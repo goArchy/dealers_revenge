@@ -1,8 +1,8 @@
 require 'spec_helper'
 
 describe Event do
-
   let(:user) { FactoryGirl.create(:user) }
+
   before { @event = user.events.build(description: "Lorem Ipsum", name: "Test Smith", ssn: 5555, address: "555 Yoda Dr.", zip: 55555 ) }
 
   subject { @event }
