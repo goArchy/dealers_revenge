@@ -6,16 +6,16 @@ production:
 development:
   adapter: postgresql
   database: dealers_revenge
-#  host: localhost
-#  port: 5432
+  host: localhost
+  port: 5432
 #  username: postgres
 #  password: isotope_bang
 
 test: &test
   adapter: postgresql
   database: dealers_revenge
-#  host: localhost
-#  port: 5432
+  host: localhost
+  port: 5432
   #username: postgres
   #password: isotope_bang
 
