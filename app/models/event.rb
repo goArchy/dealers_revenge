@@ -6,7 +6,7 @@ class Event < ActiveRecord::Base
 
   belongs_to :user
 
-  default_scope order: 'events.created_at DESC'
+  default_scope order: 'created_at DESC'
 
   validates_presence_of :user_id, :first_name, :last_name, :dob, :ssn
 
