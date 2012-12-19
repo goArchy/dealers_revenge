@@ -30,6 +30,6 @@ end
 User.all.each do |user|
   5.times do
     user.events.create first_name: Faker::Name.first_name, last_name: Faker::Name.last_name,
-                       address: Faker::Address.street_address(include_secondary = false), dob: 10.years.ago, ssn: Faker::Base.numerify("####")
+                       address: Faker::Address.street_address(include_secondary = false), dob: 10.years.ago, ssn: Faker::Base.numerify("#########")
   end
 end
