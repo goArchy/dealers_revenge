@@ -10,7 +10,8 @@ FactoryGirl.define do
 
   factory :event do
     description "Lorem Ipsum"
-    name "Donohoo"
+    first_name "Bilbo"
+    last_name "Baggins"
     dob 555555
     ssn 5155
     user
