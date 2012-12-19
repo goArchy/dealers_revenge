@@ -2,6 +2,8 @@ class Event < ActiveRecord::Base
   include PgSearch
   multisearchable :against => [:first_name, :last_name, :dob, :ssn, :address, :zip]
 
+  validates_format_of :ssn, :with => /^\d{3}(|-)\d{2}(|-)\d{4}$/
+
   attr_accessible :address, :description, :dob, :first_name, :last_name, :ssn, :user_id, :zip
 
   belongs_to :user

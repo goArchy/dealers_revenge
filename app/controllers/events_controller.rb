@@ -14,6 +14,7 @@ class EventsController < ApplicationController
 
   def create
     @event = @user.events.new(params[:event])
+    @event.ssn = "#{params[:ssn1]}-#{params[:ssn2]}-#{params[:ssn3]}"
     if @event.save
       flash[:success] = "Event Created!"
       redirect_to events_path
