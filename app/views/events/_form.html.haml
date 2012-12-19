@@ -14,11 +14,11 @@
       = f.date_select :dob
 
       = f.label :ssn
-      = text_field_tag :ssn1, nil, maxlength: 3, :class => "size3"
+      %span.size3= text_field_tag :ssn1, nil, maxlength: 3
       = "-"
-      = text_field_tag :ssn2, nil, maxlength: 2, :class => "size2"
+      %span.size2= text_field_tag :ssn2, nil, maxlength: 2
       = "-"
-      = text_field_tag :ssn3, nil, maxlength: 4, :class => "size4"
+      %span.size4= text_field_tag :ssn3, nil, maxlength: 4
 
       = f.label :description
       = f.text_area :description
