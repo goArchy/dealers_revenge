@@ -22,10 +22,30 @@ class EventsController < ApplicationController
     end
   end
 
+  def show
+    @event = Event.find(params[:id])
+  end
+
+  def edit
+    @event = Event.find(params[:id])
+  end
+
+  def update
+    @event = Event.find(params[:id])
+    if @event.update_attributes(params[:event])
+      flash[:success] = "Event updated"
+      redirect_to events_path
+    else
+      flash[:alert] = "There was an error updating your event."
+      render 'edit'
+    end
+  end
+
 
   def destroy
-     @event.destroy
-     redirect_to root_url
+     @event = Event.find(params[:id]).destroy
+     flash[:success] = "Event destroyed."
+     redirect_to events_path
   end
 
   private

@@ -1,8 +1,25 @@
-%li
-  %span.content= event.name
+.twelve.columns
+  %table.table.table-bordered.table-striped
+    %tr
+      %th Dealer Name
+      %th Name
+      %th Address
+      %th DOB
+      %th SSN
+      %th Description
+
+      %tr
+        %td= @event.user.name
+        %td= @event.name
+        %td= @event.address
+        %td= @event.dob.strftime("%m/%d/%Y")
+        %td= @event.ssn
+        %td= @event.description
+
   %span.timestamp
-    Posted #{time_ago_in_words(event.created_at)} ago.
-  - if current_user?(event.user)
-    = link_to "delete", event, method: :delete, |
-      data: { confirm: "You sure?" },           |
-      title: event.name                         |
+    Posted #{time_ago_in_words(@event.created_at)} ago.
+
+  - if current_user
+    = link_to "edit", edit_event_path(@event), class: "tiny button"
+    = link_to "delete", @event, method: :delete, class: "tiny button"
+
