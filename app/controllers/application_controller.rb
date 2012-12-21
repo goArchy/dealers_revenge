@@ -1,6 +1,11 @@
 class ApplicationController < ActionController::Base
   def after_sign_in_path_for(resource)
-    events_path
+    stored_location_for(resource) ||
+      if resource.is_a?(Admin)
+        manage_path
+      else
+        events_path(resource)
+      end
   end
   protect_from_forgery
 end
