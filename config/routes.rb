@@ -6,6 +6,9 @@ DealersRevenge::Application.routes.draw do
 
   root :to => "pages#home"
   match '/about', to: 'pages#about'
+  match '/link', to: 'pages#link'
+  match '/blog', to: 'pages#blog'
+  match '/tutorial', to: 'pages#tutorial'
 
   devise_for :users
   resources :events

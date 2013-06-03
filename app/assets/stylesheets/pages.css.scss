@@ -2,3 +2,67 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.container_base {
+  background-color: #fff;
+  height: 600px;
+  width:600px;
+  position: relative;
+  left: 160px;
+  p {
+    color: #424242;
+    font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif; 
+    letter-spacing:0.1em;
+    text-align:center;
+    margin: 40px auto;
+    text-transform: lowercase;
+    line-height: 145%;
+    font-size: 14pt;
+    font-variant: small-caps;
+  }
+  section#color_options{
+    height: 90px;
+    ul.color_swatch{ 
+      position: static;
+      li.swatch_red {
+        cursor:pointer;
+        background: url(asset_path('red_swatch.gif',image));
+        display: inline-block;
+        width:70px;
+        height:45px;
+      }
+      li.swatch_black {
+        cursor:pointer;
+        background: url(asset_path('black_swatch.gif',image));
+        display: inline-block;
+        width:70px;
+        height:45px;
+      }
+      li.wheel_variant_one { 
+      }
+    }
+  }
+  .car_red {
+    background: transparent url(asset_path('rd_ex_honda_front.png', image));
+    width: 550px;
+    height: 440px;
+    left: 20px;
+    top: 100px;
+    position: absolute;
+  }
+  .car_black {
+    background: transparent url(asset_path('blk_ex_honda_front.png', image));
+    width: 550px;
+    height: 440px;
+    left: 20px;
+    top: 100px;
+    position: absolute;
+  }
+  .after_rims {
+    background: transparent url(asset_path('aftermarket_wheels.png', image));
+    width: 550px;
+    height: 440px;
+    left: 20px;
+    top: 100px;
+    position: absolute;
+  }
+}

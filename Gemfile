@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 
 gem 'rails', '3.2.8'
 gem 'pg'
@@ -16,12 +16,12 @@ group :assets do
   gem 'libv8', '~> 3.11.8'
 
   gem 'jquery-rails'
+  gem 'zurb-foundation'
   gem 'sass-rails'
   gem 'coffee-rails'
   gem 'jquery-ui-rails'
   gem 'compass-rails'
   gem 'uglifier'
-  gem 'zurb-foundation'
 end
 
 group :test do

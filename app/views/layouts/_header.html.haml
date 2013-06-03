@@ -2,11 +2,14 @@
   .navbar-inner
     .container
       - if current_user
-        = link_to "Dealers Revenge", events_path, id: "logo"
+        = link_to "GoArchy", events_path, id: "logo"
       -else
-        = link_to "Dealers Revenge", root_path, id: "logo"
+        = link_to "GoArchy", root_path, id: "logo"
       %nav
         %ul.nav.pull-right
           %li= link_to "Home",  root_path
           %li= link_to "About", about_path
+          %li= link_to "Links", link_path
+          %li= link_to "Blog", blog_path
+          %li= link_to "Tutorials", tutorial_path
           %li= render 'devise/shared/login_logout'
