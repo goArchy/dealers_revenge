@@ -1,20 +1,28 @@
 .panel.center
   %h2 Welcome to my site!
-  %p My name is Guy Archibald and I am a Software Developer.
   %center
 
 .row-fluid
-  .span7
+  .span6
     %h2 A slider?
     = render 'shared/nivo_slider'
+  .span6
+    .content
+      %h2 Featured Post
 
-.content.about
-  %h2 
-  %article
-    %ul
-      %li= link_to "About Me", about_path
-      %li= link_to "Links", link_path 
-      %li= link_to "Blog", blog_path 
-      %li= link_to "Tutorials", tutorial_path 
-
+%hr
+.row-fluid
+  .span6
+    .content
+      %h2 
+      %article
+        %ul
+          %li= link_to "About Me", about_path
+          %li= link_to "Links", link_path 
+          %li= link_to "Blog", blog_path 
+          %li= link_to "Tutorials", tutorial_path 
+  .span6
+    .content.tutorial
+      %h2 Recent Tutorials
+      %article
 
