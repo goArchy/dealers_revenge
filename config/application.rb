@@ -69,6 +69,10 @@ module DealersRevenge
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    config.autoload_paths += %W(#{config.root}/lib)
+    config.autoload_paths += Dir["#{config.root}/lib/**/"]
+
     # don't generate RSpec tests for views and helpers
     config.generators do |g|
       g.view_specs false
