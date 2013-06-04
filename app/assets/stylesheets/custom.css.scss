@@ -18,9 +18,13 @@ html {
 
 body {
   padding-top: 60px;
-  background-image: url(asset_path('n9.jpg', image));
-  background-position: center top;
-  background-repeat: no-repeat;
+  background-image: url(asset_path('grim_hack.jpg', image));
+  background-repeat:no-repeat;
+  background-position:center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size:cover;
 
 }
 
@@ -34,10 +38,9 @@ textarea {
 
 .panel {
   width: 60em;
-  background-color:white;
-  border: .5em solid grey;
-  border-radius:15px;
+  background-color:$grayLight;
   box-shadow: 5px 5px 5px #000;
+  margin-left:20px;
   h1 {
     color:white;
  }
@@ -73,7 +76,7 @@ article {
 .content {
   width: 30em;
   height: 30em;
-  background-color:white;
+  background-color:$grayLight;
   border: .5em solid black;
   box-shadow: 5px 5px 5px #000;
 }
@@ -98,7 +101,7 @@ h2 {
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
-  color: $grayLight;
+  color: white;
 }
 
 p {
@@ -120,7 +123,7 @@ p {
   font-weight: bold;
   line-height: 1;
   &:hover {
-    color: white;
+    color: gray;
     text-decoration: none;
   }
 }
@@ -145,6 +148,18 @@ input, textarea, select, .uneditable-input {
   margin-bottom: 15px;
   @include box_sizing;
 }
+
+
+/* links */
+.links {
+  margin-bottom: 150px;
+  .inline {
+    display:inline-block;
+    li {
+      margin-top: 10px; 
+      }
+    }
+  } 
 
 
 input {
