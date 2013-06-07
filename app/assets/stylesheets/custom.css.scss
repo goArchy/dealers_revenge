@@ -77,7 +77,7 @@ article {
   width: 30em;
   height: 30em;
   background-color:$grayLight;
-  border: .5em solid black;
+  border: .2em solid white;
   box-shadow: 5px 5px 5px #000;
 }
 
@@ -131,8 +131,8 @@ p {
 /* footer */
 .footer{
   border: 1px solid #dbdbdb;
-  border-radius: 5px;
-  background: #F5F5F5;
+  border-radius: 1px;
+  background: $grayLight;
   margin-top: 20px;
   li {
     display: inline-block;

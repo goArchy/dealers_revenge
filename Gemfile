@@ -16,10 +16,10 @@ group :assets do
   gem 'therubyracer'
   gem 'execjs'
 
-  gem 'zurb-foundation'
   gem 'sass-rails'
   gem 'coffee-rails'
   gem 'compass-rails'
+  gem 'zurb-foundation', '~> 4.0.0'
   gem 'uglifier'
 end
 
