@@ -5,6 +5,7 @@ gem 'pg'
 gem 'pg_search'
 gem 'activerecord-postgresql-adapter'
 gem 'haml-rails'
+gem 'bootstrap-sass', '~> 2.3.2'
 gem 'heroku'
 gem "paperclip", "~> 2.4"
 gem 'jquery-rails'
@@ -15,11 +16,9 @@ gem 'faker'
 group :assets do
   gem 'therubyracer'
   gem 'execjs'
-
   gem 'sass-rails'
   gem 'coffee-rails'
   gem 'compass-rails'
-  gem 'zurb-foundation', '~> 4.0.0'
   gem 'uglifier'
 end
 
