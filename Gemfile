@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.2.8'
+gem 'rails', '4.0.0'
 gem 'pg'
 gem 'pg_search'
 gem 'activerecord-postgresql-adapter'
@@ -12,6 +12,8 @@ gem 'jquery-rails'
 gem 'devise'
 gem 'rails_admin'
 gem 'faker'
+gem 'bourbon'
+gem 'protected_attributes'
 
 group :assets do
   gem 'therubyracer'

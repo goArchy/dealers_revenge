@@ -4,16 +4,16 @@ DealersRevenge::Application.routes.draw do
 
   devise_for :admins
 
-  root :to => "pages#home"
-  match '/about', to: 'pages#about'
-  match '/link', to: 'pages#link'
-  match '/blog', to: 'pages#blog'
-  match '/tutorial', to: 'pages#tutorial'
+  root 'pages#home'
+  get '/about', to: 'pages#about'
+  get '/link', to: 'pages#link'
+  get '/blog', to: 'pages#blog'
+  get '/tutorial', to: 'pages#tutorial'
 
   devise_for :users
   resources :events
 
-  match "search"  => "search#site_search"
+  get "search"  => "search#site_search"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -64,7 +64,7 @@ DealersRevenge::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-   root :to => 'home#index'
+  # root :to => 'home#index'
 
   # See how all your routes lay out with "rake routes"
 
