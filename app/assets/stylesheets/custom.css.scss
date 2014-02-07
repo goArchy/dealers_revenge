@@ -1,8 +1,7 @@
-@import "bootstrap";
-
 /* mixins, variables, etc. */
 
 $grayMediumLight: #eaeaea;
+$grayLight: #555;
 
 @mixin box_sizing {
   -moz-box-sizing: border-box;
@@ -10,22 +9,18 @@ $grayMediumLight: #eaeaea;
   box-sizing: border-box;
 }
 
-/* universal */
-
-html {
-  overflow-y: scroll;
-}
+/* Global */
 
 body {
   padding-top: 60px;
-  background-image: url(asset_path('grim_hack.jpg', image));
+  background: image-url(asset_path('grim_hack.jpg', image));
   background-repeat:no-repeat;
   background-position:center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size:cover;
-
+  font-family: $verdana;
 }
 
 section {
@@ -85,7 +80,7 @@ article {
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
-  font-family: Futura;
+  font-family: $verdana;
 }
 
 h1 {
@@ -98,10 +93,7 @@ h1 {
 h2 {
   font-size: 1.7em;
   letter-spacing: -1px;
-  margin-bottom: 30px;
-  text-align: center;
-  font-weight: normal;
-  color: white;
+  margin-bottom: 30px; text-align: center; font-weight: normal; color: white;
 }
 
 p {
@@ -116,7 +108,7 @@ p {
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
-  color: white;
+  color: #999;
   text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;

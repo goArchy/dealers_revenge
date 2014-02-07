@@ -1,6 +1,6 @@
 DealersRevenge::Application.routes.draw do
 
-  mount RailsAdmin::Engine => '/manage', :as => 'rails_admin'
+  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
   devise_for :admins
 

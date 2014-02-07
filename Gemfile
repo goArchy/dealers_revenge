@@ -1,28 +1,30 @@
 source 'http://rubygems.org'
 
-gem 'rails', '4.0.0'
+gem 'rails', '4.0.2'
 gem 'pg'
 gem 'pg_search'
 gem 'activerecord-postgresql-adapter'
 gem 'haml-rails'
-gem 'bootstrap-sass', '~> 2.3.2'
 gem 'heroku'
-gem "paperclip", "~> 2.4"
+gem "paperclip", "~> 4.0.0"
 gem 'jquery-rails'
 gem 'devise'
 gem 'rails_admin'
 gem 'faker'
 gem 'bourbon'
+gem 'neat'
 gem 'protected_attributes'
+gem 'rails-observers'
+gem 'actionpack-page_caching'
+gem 'actionpack-action_caching'
+gem 'turbolinks', '2.2.1'
 
-group :assets do
-  gem 'therubyracer'
-  gem 'execjs'
-  gem 'sass-rails'
-  gem 'coffee-rails'
-  gem 'compass-rails'
-  gem 'uglifier'
-end
+
+gem 'therubyracer'
+gem 'execjs'
+gem 'sass-rails'
+gem 'coffee-rails'
+gem 'uglifier'
 
 group :test do
   gem "database_cleaner"
