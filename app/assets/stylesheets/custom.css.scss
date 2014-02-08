@@ -3,77 +3,30 @@
 $grayMediumLight: #eaeaea;
 $grayLight: #555;
 
-@mixin box_sizing {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
 /* Global */
 
 body {
-  padding-top: 60px;
-  background: image-url(asset_path('grim_hack.jpg', image));
-  background-repeat:no-repeat;
-  background-position:center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size:cover;
-  font-family: $verdana;
+  @include background-image(url(asset_path('grim_hack.jpg')),linear-gradient(white 0, yellow 50%, transparent 50%));
 }
 
-section {
-  overflow: auto;
-}
-
-textarea {
-  resize: vertical;
-}
-
-.panel {
-  width: 60em;
-  background-color:$grayLight;
-  box-shadow: 5px 5px 5px #000;
-  margin-left:20px;
-  h1 {
-    color:white;
- }
-}
-
-.center {
-  text-align: center;
-  h1 {
-    margin-bottom: 10px;
+.main-content {
+  @include outer-container;
+  .slider {
+    @include span-columns(10);
+    background-color: grey;
+    height: 20em;
+    margin-bottom: 3em;
   }
-}
-
-article {
-  ul{
-    li {
-      width: 120px;
-      height: 40px;
-      border: 3px solid black;
-      background-color: grey;
-      box-shadow: 5px 5px 5px #888;
-      margin: 10px 10px;
-      padding: 21px;
-      a {
-        font-size: 1.1em;
-        color:black;
-        text-decoration:none;
-        padding: 1px 1px;
-      }
+  .home-content {
+    @include outer-container;
+    .content {
+      @include span-columns(3.3);
+      height: 20em;
+      background-color:$grayLight;
+      box-shadow: 5px 5px 5px #333;
+      margin-bottom: 3em;
     }
   }
-}
-
-.content {
-  width: 30em;
-  height: 30em;
-  background-color:$grayLight;
-  border: .2em solid white;
-  box-shadow: 5px 5px 5px #000;
 }
 
 /* typography */
@@ -96,38 +49,45 @@ h2 {
   margin-bottom: 30px; text-align: center; font-weight: normal; color: white;
 }
 
-p {
-  font-size: 1.1em;
-  line-height: 1.7em;
-}
-
-
 /* header */
-
-#logo {
-  float: left;
-  margin-right: 10px;
-  font-size: 1.7em;
-  color: #999;
-  text-transform: uppercase;
-  letter-spacing: -1px;
-  padding-top: 9px;
-  font-weight: bold;
-  line-height: 1;
-  &:hover {
-    color: gray;
-    text-decoration: none;
+header {
+  @include position(relative, 0px 0 0 0px);
+  .header-container {
+    background-color:$grayLight;
+    @include outer-container;
+    .logo {
+      @include span-columns(6);
+      a {
+        text-decoration: none;
+        &:hover {
+          color: gray;
+          text-decoration: none;
+        }
+      }
+    }
+    .menu {
+      @include span-columns(4);
+      nav ul {
+        li {
+          display: inline-block;
+          margin: 0 10px;
+          a {
+            text-decoration: none;
+          }
+        }
+      }
+    }
   }
 }
 
+
 /* footer */
-.footer{
-  border: 1px solid #dbdbdb;
-  border-radius: 1px;
-  background: $grayLight;
-  margin-top: 20px;
-  li {
-    display: inline-block;
+.footer {
+  .footer-nav {
+    background: $grayLight;
+    li {
+      display: inline-block;
+    }
   }
 }
 
@@ -138,7 +98,6 @@ input, textarea, select, .uneditable-input {
   width: 50%;
   padding: 10px;
   margin-bottom: 15px;
-  @include box_sizing;
 }
 
 
