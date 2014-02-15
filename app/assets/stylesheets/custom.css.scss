@@ -1,78 +1,25 @@
-/* mixins, variables, etc. */
-
-$grayMediumLight: #eaeaea;
-$grayLight: #555;
-
-/* Global */
-
-body {
-  @include background-image(url(asset_path('grim_hack.jpg')),linear-gradient(white 0, yellow 50%, transparent 50%));
-}
-
-.main-content {
-  @include outer-container;
-  .slider {
-    @include span-columns(10);
-    background-color: grey;
-    height: 20em;
-    margin-bottom: 3em;
-  }
-  .home-content {
-    @include outer-container;
-    .content {
-      @include span-columns(3.3);
-      height: 20em;
-      background-color:$grayLight;
-      box-shadow: 5px 5px 5px #333;
-      margin-bottom: 3em;
-    }
-  }
-}
-
-/* typography */
-
-h1, h2, h3, h4, h5, h6 {
-  line-height: 1;
-  font-family: $verdana;
-}
-
-h1 {
-  font-size: 3em;
-  letter-spacing: -2px;
-  margin-bottom: 30px;
-  text-align: center;
-}
-
-h2 {
-  font-size: 1.7em;
-  letter-spacing: -1px;
-  margin-bottom: 30px; text-align: center; font-weight: normal; color: white;
-}
-
 /* header */
 header {
-  @include position(relative, 0px 0 0 0px);
-  .header-container {
-    background-color:$grayLight;
-    @include outer-container;
-    .logo {
-      @include span-columns(6);
-      a {
-        text-decoration: none;
-        &:hover {
-          color: gray;
-          text-decoration: none;
-        }
+  @include media($large) {
+    .header-container {
+      @include linear-gradient(#777, #444);
+      @include box-shadow(0 0 6px 3px #000);
+      @include outer-container;
+      color: $brand_color;
+      padding: 15px;
+      font-size: 18px;
+      font-weight: bold;
+      .logo {
+        @include span-columns(3);
+        display: inline-block;
       }
-    }
-    .menu {
-      @include span-columns(4);
-      nav ul {
-        li {
-          display: inline-block;
-          margin: 0 10px;
-          a {
-            text-decoration: none;
+      .menu {
+        @include span-columns(5);
+        display: inline-block;
+        ul {
+          list-style: none;
+          li {
+            display: inline-block;
           }
         }
       }
@@ -80,52 +27,36 @@ header {
   }
 }
 
+.slider {
+  background-color: $grey;
+  height: 20em;
+  margin-bottom: 3em;
+}
+.main-content {
+  @include outer-container;
+  .content {
+    @include media($medium) {
+      @include span-columns(8);
+      height: 20em;
+      background-color:$grey;
+      box-shadow: 5px 5px 5px #333;
+      margin: 1em 0;
+    }
+    @include media($large) {
+      @include span-columns(2.5);
+      height: 20em;
+      background-color:$grey;
+      box-shadow: 5px 5px 5px #333;
+    }
+  }
+}
 
 /* footer */
 .footer {
   .footer-nav {
-    background: $grayLight;
+    background: $lightgrey;
     li {
       display: inline-block;
     }
   }
 }
-
-/* forms */
-
-input, textarea, select, .uneditable-input {
-  border: 1px solid #bbb;
-  width: 50%;
-  padding: 10px;
-  margin-bottom: 15px;
-}
-
-
-/* links */
-.links {
-  margin-bottom: 150px;
-  .inline {
-    display:inline-block;
-    li {
-      margin-top: 10px; 
-      }
-    }
-  } 
-
-
-input {
-  height: auto !important;
-}
-
-#error_explanation {
-  color: #f00;
-  ul {
-    list-style: none;
-    margin: 0 0 18px 0;
-  }
-}
-
-.field_with_errors {
-  @extend .control-group;
-  @extend .error;
- }

@@ -1,27 +1,43 @@
 !!! 5
-/[if lt IE 7 ] <html class=\"ie6\" lang=\"en\">
-/[if IE 7 ]    <html class=\"ie7\" lang=\"en\">
-/[if IE 8 ]    <html class=\"ie8\" lang=\"en\">
+/[if lt IE 7 ] <html class="no-js lt-ie9 lt-ie8 lt-ie7">
+/[if IE 7 ]    <html class="no-js lt-ie9 lt-ie8">
+/[if IE 8 ]    <html class="no-js lt-ie9">
 /[if IE 9 ]    <html class=\"ie9\" lang=\"en\">
 /[if (gt IE 9)|!(IE)] <!--> <html lang=\"en\">
 
 %head
+  / Character Encoding
   %meta{ :charset => "utf-8" }
+  / Google Chrome Frame for IE
+  %meta{ :content => "IE=edge", "http-equiv" => "X-UA-Compatible"}/
 
-  -# Uncomment to make IE8 render like IE7
-  -# meta http-equiv="X-UA-Compatible" content="IE=7"
-
-  -# Set the viewport width to device width for mobile
-  -# %meta{ :name => "viewport", :content => "width=device-width, initial-scale=1.0" }
+  / Mobile Meta: Mobile viewport optimized
+  %meta{:content => "True", :name => "HandheldFriendly"}/
+  %meta{:content => "320", :name => "MobileOptimized"}/
+  %meta{:content => "initial-scale=1, minimum-scale=1, user-scalable=no, maximum-scale=1, width=device-width", :name => "viewport"}/
+  %meta{:content => "yes", :name => "apple-mobile-web-app-capable"}/
+  %meta{:content => "black", :name => "apple-mobile-web-app-status-bar-style"}/
+  %meta{:content => "", :name => "apple-mobile-web-app-title"}/
 
   %title= content_for?(:title) ? yield(:title) : "GoArchy"
+
+  / Browser Favicon
+  %link{href: "favicon.ico", rel: "icon"}/
 
   = stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true
   = javascript_include_tag "application", "data-turbolinks-track" => true
   = csrf_meta_tag
 
+  / Serve Up Webfonts Here
+  /[if lt IE 9]
+    <script src="dist/js/html5shiv.min.js"></script>
+    <script src="dist/js/selectivizr.min.js"></script>
+    <script src="dist/js/respond.min.js"></script>
+
 %body
-  = render 'layouts/header'
-  = yield
-  = render 'layouts/footer'
-  = javascript_include_tag "application"
+  .page-container
+    %section.contain
+      = render 'layouts/header'
+      = yield
+      = render 'layouts/footer'
+

@@ -69,5 +69,9 @@ module DealersRevenge
       g.view_specs false
       g.helper_specs false
     end
+
+    # Connects bower to the rails asset pipeline
+    config.assets.paths << Rails.root.join('app', 'assets', 'components')
+
   end
 end
