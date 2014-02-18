@@ -35,9 +35,10 @@
     <script src="dist/js/respond.min.js"></script>
 
 %body
+  .page-header
+    = render 'layouts/header'
+    = render 'pages/myslider'
   .page-container
-    %section.contain
-      = render 'layouts/header'
-      = yield
-      = render 'layouts/footer'
+    = yield
+    = render 'layouts/footer'
 

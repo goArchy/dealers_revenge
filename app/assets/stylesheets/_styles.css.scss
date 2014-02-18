@@ -26,7 +26,10 @@ img { vertical-align: middle; }
 ::selection { background-color: $brand_color; color: $white; text-shadow: none; }
 ::-moz-selection { background-color: $brand_color; color: $white; text-shadow: none; }
 
-
+.page-header {
+  overflow: hidden;
+  width: 100%;
+}
 .page-container {
   overflow: auto;
   position: relative;

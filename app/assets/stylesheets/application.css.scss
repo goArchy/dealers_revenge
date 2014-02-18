@@ -51,9 +51,11 @@
   @import "neat";
 
   // Partials
+//  @import "partials/royalSlider";
   @import "partials/typography";
 
   // Site Styles
+  @import "royalSlider";
   @import "styles";
   @import "custom";
 

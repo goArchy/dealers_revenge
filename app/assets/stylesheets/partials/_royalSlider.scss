@@ -14,7 +14,7 @@
     background: none;
     padding-top: 3em;
 
-    @include media($mobile) {
+    @include media($medium) {
       padding-top: 2em;
     }
   }
@@ -78,7 +78,7 @@
       border-color: #eee;
 
       .rsTmb:after {
-        @include cssTriangle(12px, $white, top);
+        //@include cssTriangle(12px, $white, top);
         position: absolute;
         bottom: -3.25em;
         left: 0;
@@ -131,7 +131,7 @@
     bottom: auto;
     top: -20px;
 
-    @include media($mobile) {
+    @include media($medium) {
       display: none;
       visibility: hidden;
     }
